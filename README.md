@@ -29,7 +29,9 @@ mongobase.start()
         const newUser = { hello: 'world' }
 
         Colllection.create(newUser)
-            .then(document => {
+            .then(doc => {
+                console.log(doc)
+                //{ hello: 'world', _id: 5e60b3d317e6c15153f0476f }
             })
     })
 ```
@@ -55,7 +57,9 @@ MongoClient.connect(url, options, (err, client) => {
 
     Collection
         .create(newDocument)
-        .then(document => {
+        .then(doc => {
+            console.log(doc)
+            //{ hello: 'fizz', world: 'buzz', _id: 5e60b3d317e6c15153f0476f }
         })
 
 })

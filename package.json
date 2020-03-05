@@ -1,12 +1,25 @@
 {
   "name": "mongobase",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.6",
+  "description": "A lightweight starter template based off the native mongodb driver. Comes with basic CRUD operations and middleware support.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asetre/mongobase"
+  },
+  "keywords": [
+    "mongodb",
+    "mongobase",
+    "nosql",
+    "orm",
+    "template",
+    "starter",
+    "query"
+  ],
+  "author": "Paul Asetre",
   "license": "MIT",
   "dependencies": {
     "mongodb": "^3.5.4"
