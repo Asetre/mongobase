@@ -19,17 +19,18 @@ const mongobase = require('mongobase')
 
 mongobase.init(url, database, options)
 mongobase.start()
+    .then(() => {
+        class UsersModel extends mongobase.Model {
+        }
+        const collectionName = 'Users'
 
-class UsersModel extends mongobase.Model {
-}
-const collectionName = 'Users'
+        const Collection = mongobase.create(collectionName, UsersModel)
 
-const Collection = mongobase.create(collectionName, UsersModel)
+        const newUser = { hello: 'world' }
 
-const newUser = { hello: 'world' }
-
-Colllection.create(newUser)
-    .then(document => {
+        Colllection.create(newUser)
+            .then(document => {
+            })
     })
 ```
 
