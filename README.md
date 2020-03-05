@@ -14,7 +14,7 @@ yarn add mongobase
 ```
 
 ## Basic Usage
-```
+```javascript
 const mongobase = require('mongobase')
 
 mongobase.init(url, database, options)
@@ -35,7 +35,7 @@ Colllection.create(newUser)
 
 ## Advanced Usage
 Usage with your own mongo database setup
-```
+```javascript
 const { MongoClient } = require('mongodb')
 const { Model, collection } = require('mongobase')
 
@@ -43,7 +43,6 @@ const collectionName = 'users'
 class CustomModel extends Model {
 }
 
-//Mongo setup
 const { url, options, db } = configuration
 MongoClient.connect(url, options, (err, client) => {
     if(err) return reject(err)
