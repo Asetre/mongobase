@@ -43,6 +43,7 @@ class Model {
 
         return this.collection.deleteOne({ _id })
     }
+    
 }
 
 for (const key of Object.getOwnPropertyNames(Model.prototype)) {
